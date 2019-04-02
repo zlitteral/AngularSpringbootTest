@@ -1,0 +1,71 @@
+<!-- <div class="container home-container">
+  <div class="row">
+    <div class="col-md-6">
+      <mat-drawer-container class="example-container" autosize>
+          <mat-drawer #drawer class="example-sidenav" mode="side">
+            <p>Auto-resizing sidenav</p>
+            <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+            <button (click)="showFiller = !showFiller" mat-raised-button>
+              Toggle extra text
+            </button>
+          </mat-drawer>
+          <div class="container">
+            <div class="example-sidenav-content">
+                <div class="row">
+                  <button type="button" mat-button (click)="getAllShips()">
+                    Toggle sidenav
+                  </button>
+                </div>
+              </div>
+          </div>
+        </mat-drawer-container>
+    </div>
+    <div class="col-md-6">
+      <div class="container">
+          <div class="row">
+              <button type="button" id="myId" mat-button (click)="getAllShips()">
+                Sample backend call
+              </button>
+          </div>
+        </div>
+    </div>
+  </div>
+</div> -->
+<div class="container">
+  <div class="row">
+      <div class="col-md-6">
+          <button type="button" mat-button (click)="getAllShips()">
+              Get shipwrecks
+          </button>
+      </div>
+      <div class="col-md-6">
+          <button type="button" mat-button (click)="clear()">
+              Clear
+          </button>
+      </div>
+    </div>
+    <div class="row">
+        <h2>Shipwrecks</h2>
+    </div>
+    <div class="row">
+        <div *ngFor="let ship of ships" class="ship-box">
+            <ul>
+              <li>
+                  Name: {{ship.name}}
+              </li>
+              <li>
+                  Description: {{ship.description}}
+              </li>
+              <li>
+                Condition: {{ship.condition}}
+            </li>
+              <li>
+                  Depth: {{ship.depth}}
+              </li>
+              <li>
+                Year Discovered: {{ship.yearDiscovered}}
+            </li>
+            </ul>
+          </div>
+    </div>
+</div>
